@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>MeuFlix</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topo">
+  <div class="logo">Naruto</div>
+  <button onclick="voltar()">⬅ Voltar</button>
+</header>
+
+<section class="episodios">
+
+  <h2>Temporada 1</h2>
+
+  <div class="ep" onclick="abrirVideo('https://drive.google.com/file/d/142IjGrATKqeCCoq9G9lJS0DnDzzwQOaR/preview')">
+    Episódio 1 – Naruto Uzumaki Chegando!
+    <div id="player" class="player">
+  <span onclick="fecharVideo()">✖</span>
+  <iframe id="video" allow="autoplay"></iframe>
+</div>
+
+  </div>
+
+  <div class="ep" onclick="abrirVideo('https://drive.google.com/file/d/1-TlKLv758P97-qCKkYoP3WnHUOu_LrPp/preview')">
+    Episódio 2 – Meu Nome é Konohamaru 
+    <div id="player" class="player">
+  <span onclick="fecharVideo()">✖</span>
+  <iframe id="video" allow="autoplay"></iframe>
+</div>
+
+  </div>
+
+</section>
+
+<div id="player" class="player">
+  <span onclick="fecharVideo()">✖</span>
+  <iframe id="video" allow="autoplay"></iframe>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
