@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>MeuFlix</title>
+  <nav class="topo-categorias">
+  <button onclick="filtrar('todos')" class="ativo">Todos</button>
+  <button onclick="filtrar('filme')">Filmes</button>
+  <button onclick="filtrar('serie')">Séries</button>
+  <button onclick="filtrar('anime')">Animes</button>
+</nav>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FONTE -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+<header class="topo">
+  <div class="logo">MeuFlix</div>
+
+  <input 
+    type="text" 
+    class="busca" 
+    placeholder="Buscar filme..."
+  >
+</header>
+
+<section class="catalogo">
+
+  <div class="card" data-categoria="filme"
+    onclick="abrirVideo('https://drive.google.com/file/d/1o7z_t49zC4rbYzm5lbKQSGM-UEeavBEn/preview')">
+    <img src="Harry1.jpg" alt="Harry Potter e a Pedra Filosofal">
+    <div>
+      <h4>Harry Potter e a Pedra Filosofal</h4>
+      <span>2001</span>
+    </div>
+  </div>
+
+  <div class="card" data-categoria="serie"
+    onclick="abrirVideo('https://drive.google.com/file/d/1aPOWMY9eZdxBpD9c9keyQ7ALxDGTXlHi/preview')">
+    <img src="doctor.jpg" alt="Doctor Who">
+    <div>
+      <h4>Doctor Who</h4>
+      <span>2005</span>
+    </div>
+  </div>
+  <div class="card" data-categoria="anime"
+    onclick="abrirVideo('https://drive.google.com/file/d/142IjGrATKqeCCoq9G9lJS0DnDzzwQOaR/preview')">
+    <img src="naruto.jpg" alt="Naruto">
+    <div>
+      <h4>Naruto</h4>
+      <span>2002</span>
+    </div>
+  </div>
+
+  <div class="card" data-categoria="filme"
+    onclick="abrirVideo('https://drive.google.com/file/d/1j4Kkwkr6dRJJSrV_H_r5l5zmzQd2VDPS/preview')">
+    <img src="F1.jpg" alt="F1 o Filme">
+    <div>
+      <h4>F1 – O Filme</h4>
+      <span>2025</span>
+    </div>
+  </div>
+
+  <div class="card" data-categoria="filme"
+    onclick="abrirVideo('https://drive.google.com/file/d/17TZX8oqAxGdGS3A0OrlI4REvua_bOJbO/preview')">
+    <img src="oppen.jpg" alt="Oppenheimer">
+    <div>
+      <h4>Oppenheimer</h4>
+      <span>2023</span>
+    </div>
+  </div>
+
+  <div class="card" data-categoria="filme"
+    onclick="abrirVideo('https://drive.google.com/file/d/1jexNM-IDBFafjbV-6UmzF0kAOeMTuBXR/preview')">
+    <img src="dune.jpg" alt="Duna Parte Dois">
+    <div>
+      <h4>Duna: Parte Dois</h4>
+      <span>2024</span>
+    </div>
+  </div>
+
+  <div class="card" data-categoria="filme"
+    onclick="abrirVideo('https://drive.google.com/file/d/10qj5KJKtUh8gEx9O82nLNcNE9vC0Uy0T/preview')">
+    <img src="pecado.jpg" alt="Pecadores">
+    <div>
+      <h4>Pecadores</h4>
+      <span>2025</span>
+    </div>
+  </div>
+
+  <div class="card" data-categoria="filme"
+    onclick="abrirVideo('https://drive.google.com/file/d/1-Zo7y8-UYBllwdME-SnbEVprAfGoK3y5/preview')">
+    <img src="homem-aranha.jpg" alt="Homem-Aranha">
+    <div>
+      <h4>Homem-Aranha</h4>
+      <span>2002</span>
+    </div>
+  </div>
+</section>
+<div id="player" class="player">
+  <span id="fechar">✖</span>
+  <iframe id="video" allow="autoplay"></iframe>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
