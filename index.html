@@ -3,12 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>MeuFlix</title>
-  <nav class="topo-categorias">
-  <button onclick="filtrar('todos')" class="ativo">Todos</button>
-  <button onclick="filtrar('filme')">Filmes</button>
-  <button onclick="filtrar('serie')">Séries</button>
-  <button onclick="filtrar('anime')">Animes</button>
-</nav>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- FONTE -->
@@ -16,9 +10,10 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-  
 </head>
+
 <body>
+
 <header class="topo">
   <div class="logo">MeuFlix</div>
 
@@ -29,11 +24,43 @@
   >
 </header>
 
+<nav class="topo-categorias">
+  <button onclick="filtrar('todos')" class="ativo">Todos</button>
+  <button onclick="filtrar('filme')">Filmes</button>
+  <button onclick="filtrar('serie')">Séries</button>
+  <button onclick="filtrar('anime')">Animes</button>
+</nav>
+
+<section class="catalogo">
+
+</section>
+
+<!-- PLAYER -->
+<div id="player" class="player">
+  <span id="fechar">✖</span>
+  <iframe id="video" allow="autoplay"></iframe>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FONTE -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
 <section class="catalogo">
 
   <div class="card" data-categoria="filme"
     onclick="abrirVideo('https://drive.google.com/file/d/1o7z_t49zC4rbYzm5lbKQSGM-UEeavBEn/preview')">
-    <img src="Harry1.jpg" alt="Harry Potter e a Pedra Filosofal">
+    <img src="assets/images/Harry1.jpg" alt="Harry Potter e a Pedra Filosofal">
     <div>
       <h4>Harry Potter e a Pedra Filosofal</h4>
       <span>2001</span>
@@ -42,15 +69,15 @@
 
   <div class="card" data-categoria="serie"
     onclick="abrirVideo('https://drive.google.com/file/d/1aPOWMY9eZdxBpD9c9keyQ7ALxDGTXlHi/preview')">
-    <img src="doctor.jpg" alt="Doctor Who">
+    <img src="assets/images/doctor.jpg" alt="Doctor Who">
     <div>
       <h4>Doctor Who</h4>
       <span>2005</span>
     </div>
   </div>
   <div class="card" data-categoria="anime"
-    onclick="window.location.href='naruto.html'">
-    <img src="naruto.jpg" alt="Naruto">
+    onclick="window.location.href='temporadas/naruto.html'">
+    <img src="assets/images/naruto.jpg" alt="Naruto">
     <div>
       <h4>Naruto</h4>
       <span>2002</span>
@@ -59,7 +86,7 @@
 
   <div class="card" data-categoria="filme"
     onclick="abrirVideo('https://drive.google.com/file/d/1j4Kkwkr6dRJJSrV_H_r5l5zmzQd2VDPS/preview')">
-    <img src="F1.jpg" alt="F1 o Filme">
+    <img src="assets/images/F1.jpg" alt="F1 o Filme">
     <div>
       <h4>F1 – O Filme</h4>
       <span>2025</span>
@@ -68,7 +95,7 @@
 
   <div class="card" data-categoria="filme"
     onclick="abrirVideo('https://drive.google.com/file/d/17TZX8oqAxGdGS3A0OrlI4REvua_bOJbO/preview')">
-    <img src="oppen.jpg" alt="Oppenheimer">
+    <img src="assets/images/oppen.jpg" alt="Oppenheimer">
     <div>
       <h4>Oppenheimer</h4>
       <span>2023</span>
@@ -77,7 +104,7 @@
 
   <div class="card" data-categoria="filme"
     onclick="abrirVideo('https://drive.google.com/file/d/1jexNM-IDBFafjbV-6UmzF0kAOeMTuBXR/preview')">
-    <img src="dune.jpg" alt="Duna Parte Dois">
+    <img src="assets/images/dune.jpg" alt="Duna Parte Dois">
     <div>
       <h4>Duna: Parte Dois</h4>
       <span>2024</span>
@@ -86,7 +113,7 @@
 
   <div class="card" data-categoria="filme"
     onclick="abrirVideo('https://drive.google.com/file/d/10qj5KJKtUh8gEx9O82nLNcNE9vC0Uy0T/preview')">
-    <img src="pecado.jpg" alt="Pecadores">
+    <img src="assets/images/pecado.jpg" alt="Pecadores">
     <div>
       <h4>Pecadores</h4>
       <span>2025</span>
@@ -95,7 +122,7 @@
 
   <div class="card" data-categoria="filme"
     onclick="abrirVideo('https://drive.google.com/file/d/1-Zo7y8-UYBllwdME-SnbEVprAfGoK3y5/preview')">
-    <img src="homem-aranha.jpg" alt="Homem-Aranha">
+    <img src="assets/images/homem-aranha.jpg" alt="Homem-Aranha">
     <div>
       <h4>Homem-Aranha</h4>
       <span>2002</span>
@@ -104,7 +131,7 @@
 
   <div class="card" data-categoria="filme"
     onclick="abrirVideo('https://drive.google.com/file/d/1hrjLEbpfp1Lao6kGsfI4ftMI2phrLZ-c/preview')">
-    <img src="inter.jpg" alt="Interestelar">
+    <img src="assets/images/inter.jpg" alt="Interestelar">
     <div>
       <h4>Interestelar</h4>
       <span>2014</span>
@@ -113,12 +140,57 @@
 
   <div class="card" data-categoria="filme"
     onclick="abrirVideo('https://drive.google.com/file/d/1DYsCFF33qJwqVO9-F6ltsUwZ4tFhhNbR/preview')">
-    <img src="IMG_8572.jpeg" alt="Superman">
+    <img src="assets/images/superman.jpg" alt="Superman">
     <div>
       <h4>Superman</h4>
       <span>2025</span>
     </div>
   </div>
+
+  <div class="card" data-categoria="filme"
+    onclick="abrirVideo('https://drive.google.com/file/d/18F06ZQIRCDGmKTLu5VYDCqZQ9UwGOxyo/preview')">
+    <img src="assets/images/pixote.jpg" alt="Pixote A Lei do Mais Fraco">
+    <div>
+      <h4>Pixote A Lei do Mais Fraco</h4>
+      <span>1981</span>
+    </div>
+  </div>
+
+  <div class="card" data-categoria="filme"
+    onclick="abrirVideo('https://drive.google.com/file/d/1yO95NP_jn3-KLt78HIRMka6n9Mp-XIwl/preview')">
+    <img src="assets/images/spider.jpg" alt="Homem-Aranha no Aranhaverso">
+    <div>
+      <h4>Homem-Aranha no Aranhaverso</h4>
+      <span>2018</span>
+    </div>
+  </div>
+
+    <div class="card" data-categoria="filme"
+    onclick="abrirVideo('https://drive.google.com/file/d/1qtZKvSHUEIQYq86diuEW7Eby1x9U4Xes/preview')">
+    <img src="assets/images/frank.jpg" alt="Frankstein">
+    <div>
+      <h4>Frankstein</h4>
+      <span>2025</span>
+    </div>
+  </div>
+
+  <div class="card" data-categoria="filme"
+    onclick="abrirVideo('https://drive.google.com/file/d/1i2koG8rP85iP6uJLU0yBkatD4VGXgW3k/preview')">
+    <img src="assets/images/the-fantastic-four.jpg" alt="Quarteto-Fantastico">
+    <div>
+      <h4>Quarteto-Fantastico</h4>
+      <span>2025</span>
+    </div>
+  </div>
+
+  <div class="card" data-categoria="serie"
+    onclick="window.location.href='temporadas/cavaleiro.html'">
+    <img src="assets/images/cavaleiro.png" alt="O Cavaleiro dos Sete Reinos">
+    <div>
+      <h4>O Cavaleiro dos Sete Reinos</h4>
+      <span>2026</span>
+    </div>
+
 </section>
 <div id="player" class="player">
   <span id="fechar">✖</span>
