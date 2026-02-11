@@ -102,7 +102,7 @@ body {
 /* hover */
 .card:hover {
   transform: scale(1.08);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+  box-shadow: 0 20px 40px #046988(0,0,0,0.8);
   z-index: 5;
 }
 
