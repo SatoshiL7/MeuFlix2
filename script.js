@@ -27,14 +27,18 @@ function fecharVideo() {
 const busca = document.querySelector(".busca");
 
 if (busca) {
-  const cards = document.querySelectorAll(".card");
-
   busca.addEventListener("keyup", () => {
     const texto = busca.value.toLowerCase();
+    const cards = document.querySelectorAll(".card");
 
     cards.forEach(card => {
       const titulo = card.querySelector("h4")?.innerText.toLowerCase() || "";
-      card.style.display = titulo.includes(texto) ? "block" : "none";
+
+      if (titulo.includes(texto)) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
     });
   });
 }
