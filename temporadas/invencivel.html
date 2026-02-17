@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>MeuFlix</title>
+  <link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+
+</head>
+<body>
+
+<header class="topo">
+  <div class="logao">MeuFlix</div>
+  <button onclick="voltar()">⬅ Voltar</button>
+</header>
+
+<section class="episodios">
+  <h2>Temporada 1</h2>
+
+  <div class="ep" onclick="abrirVideo('https://drive.google.com/file/d/1YIOGJWsQosMW573rSJOzlrZNZMUml7kb/preview')">
+    Episódio 1 
+  </div>
+
+  <div class="ep" onclick="abrirVideo('https://drive.google.com/file/d/1WHJJC_UKxNO1ssdKgvuoiJ2nPwAzFd6y/preview')">
+    Episódio 2 
+  </div>
+
+  <div class="ep" onclick="abrirVideo('https://drive.google.com/file/d/1voRKhRY--bjtTYRYKL2vj9scvhkxSxjV/preview')">
+    Episódio 3 
+  </div>
+
+   <div class="ep" onclick="abrirVideo('https://drive.google.com/file/d/1-8LDZhsPKvKWISSAHz5oB0JoeTAtUJSN/preview')">
+    Episódio 4
+  </div>
+
+   <div class="ep" onclick="abrirVideo('https://drive.google.com/file/d/1bl_oj-F59LBpUp3zI0zTbhNJzfGbkkCP/preview')">
+    Episódio 5
+  </div>
+
+   <div class="ep" onclick="abrirVideo('https://drive.google.com/file/d/1epP088hhIeqRE9-MbKyvL8HPReIGLerG/preview')">
+    Episódio 6
+  </div>
+
+   <div class="ep" onclick="abrirVideo('https://drive.google.com/file/d/1qu_wAbxAImznCtTm_lG8PZyCj3Yt_u5_/preview')">
+    Episódio 7
+  </div>
+
+   <div class="ep" onclick="abrirVideo('https://drive.google.com/file/d/1lASnOdad_F0OnvAZAGb5Fsr9js-ObVUJ/preview')">
+    Episódio 8
+  </div>
+
+
+</section>
+
+<!-- PLAYER (APENAS UMA VEZ) -->
+<div id="player" class="player">
+  <span onclick="fecharVideo()">✖</span>
+  <iframe id="video" allow="autoplay"></iframe>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
